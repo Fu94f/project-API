@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ /*Colors*/
+  
+  --color-bg:  #FFF3B0;;
+
+  --text-dark: #444;
+  --text-light: #777;
+  --pink:#F48FB1;
+  --blue: #90CAF9;
+  --mint: #80CBC4;
+  --peach: #FFB074;
+  --lavender: #B39DDB;
+
+
+  --color-accent: #E06666;
+  --color-white: #FFFFFF;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+
+  --radius: 10px;
+  --transition: 0.2s ease;
+
+ /*Typogrphy*/
+
+ --font-title:"Barrio", system-ui ;
+ --font-text:"Short Stack", cursive;
+
+
+}
+
