@@ -1,0 +1,101 @@
+
+.registration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 30px;
+  border: 5px dashed var(--pink-bright) ;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.registration-form h1 {
+  margin-bottom: 25px;
+  color: var(--peach);
+}
+
+.registration-form p {
+  font-family: var(--text);
+  font-size: 15px;
+  color: var(--lavander-bright);
+
+}
+
+.login-link a{
+  text-decoration: none;
+  color: var(--pink);
+  cursor: pointer;
+}
+
+.login-link a:hover{
+  color: var(--pink-bright);
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-box label {
+  margin-bottom: 5px;
+  color:var(--lavander-bright);
+  font-family: var(--text);
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.input-box input{
+  font-family: var(--text);
+  font-size: 15px;
+  color:var(--lavander) ;
+  padding: 12px;
+  border: 2px solid var(--color-white);
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus{
+  border-color:var(--pink-bright);
+  outline: none;
+  box-shadow: 0 0 5px var(--pink-bright);
+}
+
+.button-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+ 
+  
+}
+
+.registration-btn{
+  max-width: 100px;
+  width: 100%;
+  background-color: var(--pink);
+
+}
+
+.registration-btn:hover{
+  background-color: var(--pink-bright);
+}
+
+
+@media (max-width: 400px) {
+  .registration-form {
+    width: 90%;
+  }
+}

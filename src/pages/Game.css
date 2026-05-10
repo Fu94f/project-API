@@ -1,59 +1,96 @@
 
-body{
-    background-color: var(--color-bg);
-}
-
-.container{
+.game-container{
     display:flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-
+  
 }
+
 .text-container{
     display:flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
+    padding: 20px;
 }
 
-h1{
+.game-container h1{
     margin: 30px;
     font-family: var(--font-title);
-    font-size: 60px;
+    font-size: 4rem;
     color: var(--pink);
 }
-p{
-    font-family: var(--font-text);
-    font-size: 30px;
-    color: var(--lavender);
-    font-size: 20px;
+.text-container p, .breed-tag{
+    font-size: 1.3rem;
+    color: var(--lavander);
 }
 
-button{
+.breed-tag{
+    padding: 20px;
+}
+
+.cuteness-btn{
+    max-width: 250px;
+    width:100%;
     margin:20px;
-   font-family: var(--font-text);
-   background-color: var(--blue);
-   color: var(--color-bg);
-   font-weight: bold;
-   font-size: 15px;
-   border: none;
-   padding:  16px;
-   border-radius: 12px;
-   cursor: pointer;
-   transition: 0.2s;
-  
+    background-color: var(--blue);
 }
 
 
-button:hover {
+.cuteness-btn:hover {
   background-color: var(--mint);
 }
 
+
 img{
-    border: 8px solid var(--mint);
-    border-radius: 12px;
-    max-width: 400px;
-    max-height: 400px;
+   max-width: 400px;  
+   width: 100%;  
+   max-height: 400px;
+   border: 10px solid var(--mint);
+   border-radius: 25px;
+   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+   
 }
 
+
+@media (max-width: 1024px){
+
+    .game-container h1{
+        font-size: 3rem;
+    }
+
+    .text-container p, .breed-tag{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .game-container{
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .game-container h1{
+        font-size: 2.4rem;
+        margin: 20px 10px;
+    }
+
+    .text-container{
+        padding: 10px;
+    }
+
+    .text-container p, .breed-tag{
+        font-size: 1rem;
+    }
+
+    .cuteness-btn{
+        max-width: 200px;
+    }
+
+    img{
+        max-width: 320px;
+        border-width: 6px;
+    }
+}

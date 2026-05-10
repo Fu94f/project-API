@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: var(--color-bg);
+  padding: 20px;
+}
+
 :root {
  /*Colors*/
   
@@ -13,15 +18,42 @@
   --blue: #90CAF9;
   --mint: #80CBC4;
   --peach: #FFB074;
-  --lavender: #B39DDB;
+  --lavander: #ae96f8;
   --color-white: #FFFFFF;
+
+
+  --lavander-bright:#967beb;
+  --pink-bright:	#f32ba5;
 
 
  /*Typogrphy*/
 
- --font-title:"Barrio", system-ui ;
- --font-text:"Short Stack", cursive;
+ --font-title:"Barrio", system-ui;
+ --text:"Short Stack", cursive;
 
+}
 
+h1{
+  font-family:var(--font-title);
+  font-size: 4rem;
+
+}
+
+p{
+  font-family:var(--text);
+
+}
+
+.btn{
+  width:100%;
+  padding:16px;
+  border: none;
+  border-radius: 12px;
+  color: var(--color-white);
+  cursor: pointer;
+  font-family:var(--text);
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
 }
 

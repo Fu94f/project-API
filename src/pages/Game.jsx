@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
-import "./API.css"
+import "./Game.css"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 
-function API(){
+function Game(){
     const [dog, setDog] = useState(null);
     const [breed, setBreed] = useState(null);
 
@@ -36,25 +36,26 @@ function API(){
     
 
     return(
-        <div className="container">
+        <div className="game-container">
+
             <h1>Cuteness generator<FontAwesomeIcon icon={faStar} /></h1>
+
             <div className="text-container">
                <p>Feeling a bit low?</p> 
                <p>This little game is here for you.</p>
                <p>No score, No pressure, just press the button and feel a bit better.</p>
             </div>
             
-            <button onClick={generatePic}>Generate cuteness</button>
+            <button className="cuteness-btn btn" onClick={generatePic}>Generate cuteness</button>
             
           
             <img src={dog} alt="Random dog" />
-            
             <br />
-            <p>{breed ? `Breed: ${breed}` : "Click again"}</p>
+            <p className="breed-tag">{breed ? `Breed: ${breed}` : "Click again"}</p>
     
         </div>
     )
 
 }
 
-export default API
+export default Game;

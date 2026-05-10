@@ -1,11 +1,13 @@
 import { useState} from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import "./Registration.css"
 
 
 function Registration(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [registered, setRegistered] = useState(false);
 
     const navigate = useNavigate();
 
@@ -30,33 +32,30 @@ function Registration(){
         localStorage.setItem("password", password);
         setPassword("");
 
-        setRegistered(true); 
-
-        navigate("/");
+        navigate("/Login");
 
     }
 
     return(
-           <div className="container">
-              <form className="registration-form" onSubmit={handleSignUp}>
+        <div className="registration">
+            <form className="registration-form" onSubmit={handleSignUp}>
+
                 <h1>SIGN UP</h1>
                 <div className="input-box">
                    <label>Username</label>
-                   <input type="text"placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
+                   <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
                 </div>
                 <div className="input-box">
                    <label>Password</label>
-                   <input type="password"placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                   <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
-                <div className="remeberme">
-                   <label><input type="checkbox" /> Remeber me</label>
+                <div className="login-link">
+                   <p>Already signed up? <span><Link to="/login">Login now</Link></span></p>
                 </div>
-
-                <button type="submit">Sign up</button>
-
-        
-    
-               </form>
+                <div className="button-box">
+                  <button className=" registration-btn  btn" type="submit">Sign up</button>
+                </div>
+            </form>
         </div>
 
     );
